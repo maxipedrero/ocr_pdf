@@ -70,6 +70,8 @@ python ocr_pdf.py
 4. A file picker window will appear. Select a scanned PDF file.
 5. The extracted text will be saved to texto_extraido.txt and opened automatically.
 
+---
+
 ## Building the Executable (.exe)
 You can compile the project as a portable .exe using PyInstaller.
 
@@ -88,6 +90,9 @@ ocr_pdf/
         └── bin/
             └── pdfinfo.exe, other DLLs...
 ```
+
+---
+
 2. Run PyInstaller
 Inside the ocr_pdf folder, run:
 
@@ -102,6 +107,8 @@ Notes:
 The --add-data argument ensures all necessary binaries are included.
 The resulting executable will be created in the dist/ folder as ocr_pdf.exe.
 
+---
+
 ## Distributing the Executable
 You can share the .exe file from dist/ directly. The end user can:
 
@@ -110,6 +117,8 @@ You can share the .exe file from dist/ directly. The end user can:
 3. Receive the extracted text in a plain .txt file, opened automatically.
 
 No Python, Tesseract, or Poppler installations are needed on the target machine.
+
+---
 
 ## Project Folder Structure (Summary)
 
@@ -122,5 +131,7 @@ ocr_pdf/
 ├── Tesseract-OCR/        # Not committed to GitHub
 └── poppler/              # Not committed to GitHub
 ```
+
+---
 
 This application was developed for a freelance client who needed to extract Spanish-language text from scanned PDF documents. The final product is a self-contained .exe that works on any Windows machine and outputs the OCR results to a text file with no installation required.
