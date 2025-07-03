@@ -51,3 +51,76 @@ This is a Python-based application for extracting text from scanned PDF files. I
 
 ```bash
 pip install pytesseract pdf2image tqdm
+```
+
+---
+
+## Running the App (from Python)
+
+To use the application from source:
+
+1. Make sure Python and all dependencies are installed.
+2. Open a terminal in the project directory.
+3. Run the script:
+
+```bash
+python ocr_pdf.py
+```
+
+4. A file picker window will appear. Select a scanned PDF file.
+5. The extracted text will be saved to texto_extraido.txt and opened automatically.
+
+## Building the Executable (.exe)
+You can compile the project as a portable .exe using PyInstaller.
+
+1. Project Structure Required
+Your project folder should look like this:
+
+```bash
+ocr_pdf/
+├── ocr_pdf.py
+├── README.md
+├── requirements.txt
+├── Tesseract-OCR/
+│   └── tesseract.exe, tessdata/, etc.
+└── poppler/
+    └── Library/
+        └── bin/
+            └── pdfinfo.exe, other DLLs...
+```
+2. Run PyInstaller
+Inside the ocr_pdf folder, run:
+
+```bash
+pyinstaller --onefile ^
+  --add-data "Tesseract-OCR;Tesseract-OCR" ^
+  --add-data "poppler\\Library\\bin;poppler\\Library\\bin" ^
+  ocr_pdf.py
+```
+
+Notes:
+The --add-data argument ensures all necessary binaries are included.
+The resulting executable will be created in the dist/ folder as ocr_pdf.exe.
+
+## Distributing the Executable
+You can share the .exe file from dist/ directly. The end user can:
+
+1. Double-click to open the application.
+2. Select a PDF file.
+3. Receive the extracted text in a plain .txt file, opened automatically.
+
+No Python, Tesseract, or Poppler installations are needed on the target machine.
+
+## Project Folder Structure (Summary)
+
+```bash
+ocr_pdf/
+├── ocr_pdf.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── Tesseract-OCR/        # Not committed to GitHub
+└── poppler/              # Not committed to GitHub
+```
+
+This application was developed for a freelance client who needed to extract Spanish-language text from scanned PDF documents. The final product is a self-contained .exe that works on any Windows machine and outputs the OCR results to a text file with no installation required.
