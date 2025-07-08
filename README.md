@@ -25,6 +25,21 @@ This is a Python-based application for extracting text from scanned PDF files. I
 
 ---
 
+## ⚠️ Language Support
+
+This app uses Tesseract OCR with support for **both English and Spanish**.  
+Make sure your Tesseract installation includes the following language data files:
+
+- `eng.traineddata` (included by default)
+- `spa.traineddata` (**must be downloaded manually if not present**)
+
+To install Spanish language support, download `spa.traineddata` from the official repo:  
+https://github.com/tesseract-ocr/tessdata
+
+Place the file inside the `tessdata` folder of your Tesseract installation directory.
+
+---
+
 ## Installation Steps
 
 ### 1. Install Tesseract OCR
