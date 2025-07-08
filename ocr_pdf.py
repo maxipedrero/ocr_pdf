@@ -37,7 +37,7 @@ try:
     print("🔍 Iniciando OCR...")
 
     for i, pagina in enumerate(tqdm(paginas, desc="Procesando páginas", unit="pág")):
-        texto = pytesseract.image_to_string(pagina, lang='spa')
+        texto = pytesseract.image_to_string(pagina, lang='eng+spa')
         texto_total += f"\n--- Página {i+1} ---\n{texto}"
 
     output_path = "texto_extraido.txt"
