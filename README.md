@@ -49,9 +49,7 @@ Place the file inside the `tessdata` folder of your Tesseract installation direc
 - Install it to:  
   `C:\Tesseract-OCR` or a similar folder
 - Copy the full path to `tesseract.exe` for later use
-- Make sure the folder `tessdata/` includes `spa.traineddata` (for Spanish).  
-  If not, download it from:  
-  https://github.com/tesseract-ocr/tessdata
+- Make sure the folder `tessdata/` includes `spa.traineddata` (for Spanish).
 
 ### 2. Install Poppler for Windows
 
