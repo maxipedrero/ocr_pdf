@@ -133,18 +133,4 @@ No Python, Tesseract, or Poppler installations are needed on the target machine.
 
 ---
 
-## Project Folder Structure (Summary)
-
-```bash
-ocr_pdf/
-├── ocr_pdf.py
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── Tesseract-OCR/        # Not committed to GitHub
-└── poppler/              # Not committed to GitHub
-```
-
----
-
 This application was developed for a freelance client who needed to extract Spanish-language text from scanned PDF documents. The final product is a self-contained .exe that works on any Windows machine and outputs the OCR results to a text file with no installation required.
